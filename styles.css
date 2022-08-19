@@ -219,7 +219,7 @@ div#about {
 #about .image-container {
     width: 100%;
     overflow: hidden;
-    align-self: flex-start;
+    align-self: center;
     
 }
 
@@ -227,14 +227,12 @@ div#about {
     max-width: 95%;
     height: auto;
     display: block; 
-    margin: .5rem;
+    margin: .5rem 0 0 1rem;
     box-shadow: 0 4px 8px 0 #BDBDBD;
-    /* border-radius: 2rem; */
+    border-top-left-radius: 2rem; 
+    border-bottom-left-radius: 2rem;
 }
-#about img:hover {
-    border-radius: 2rem;
-   
-}
+
 
 
 .about-info,
@@ -330,8 +328,10 @@ div#about {
 }
 
 #projects .image-container {
-    width: 80%;
+    width: 70%;
+    overflow: hidden;
     justify-self: center;
+    flex: 1 0 10rem;
 }
 
 .projectSlides {
@@ -340,7 +340,7 @@ div#about {
   }
 
 .projectSlides img {
-    margin: 1rem;
+    margin-top: 1rem;
     width: 100%;
     border: .5rem solid white;
     box-shadow: 0 4px 8px 0 #BDBDBD;
@@ -406,12 +406,13 @@ div#about {
   }
 
   .footer a {
+    font-size: 2rem;
     color: white;
     padding: 2rem;
   }
 
  
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 768px) {
     
     html {
         font-size: 16px;
@@ -503,7 +504,7 @@ div#about {
     }
 
     .footer {
-        font-size: 2rem;
+     
         justify-content: center; 
     }
 
