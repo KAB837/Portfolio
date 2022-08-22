@@ -39,7 +39,7 @@ h2 {
     font-weight: 900;
     font-size: 3rem;
     padding: .5rem;
-    
+   
 }
 
 
@@ -48,7 +48,7 @@ h3 {
     font-weight: 700;
     font-size: 1.5rem;
     font-variant: small-caps;
-    padding: 3rem 1rem 0 1.5rem;
+    padding: 2rem 1rem 0 1.5rem;
 
 }
 
@@ -101,7 +101,6 @@ ul {
     width: 100%;
     height: 3rem;
     background-color: #5c6bc0;
-    background-color: #5c6bc0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e6ee9c' fill-opacity='0.28' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -126,7 +125,7 @@ ul {
 
 section#about {
     display: grid;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 35% 35% 30%;
     
 
 }
@@ -134,9 +133,7 @@ section#about {
 section#projects,
 section#contact {
     display: grid;
-    grid-template-columns: 30% 70%;
-    
-    
+    grid-template-columns: 35% 65%;
 
 }
 
@@ -172,7 +169,7 @@ section {
     animation-duration: 3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    animation-delay: 10s;
+    animation-delay: 5s;
  }
 
 
@@ -212,14 +209,10 @@ section {
 
 /* About Section */
 
-div#about {
-    display: none;
-}
 
 #about .image-container {
     width: 100%;
     overflow: hidden;
-    align-self: center;
     
 }
 
@@ -231,8 +224,8 @@ div#about {
     box-shadow: 0 4px 8px 0 #BDBDBD;
     border-top-left-radius: 2rem; 
     border-bottom-left-radius: 2rem;
-}
 
+}
 
 
 .about-info,
@@ -241,6 +234,7 @@ div#about {
     padding: 1rem;
     border-radius: 2rem;
     background-color:#F5F5F5; /* Teal 50 */
+    min-width: 20ch;
 }
 
 #about span.verb {
@@ -261,19 +255,19 @@ div#about {
     "project-title project-title"
     "project-images project-info";
 
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
 }
 
 .project-title {
     grid-area: project-title;
 }
 
-.project-info {
-    grid-area: project-info;
-}
-
 .project-images {
     grid-area: project-images;
+}
+
+.project-info {
+    grid-area: project-info;
 }
 
 /* The dots/bullets/indicators */
@@ -304,9 +298,6 @@ div#about {
     color: #E6EE9C;
   }
 
-
-
-
 /* Hide the images by default */
 
 .slideshow-container {
@@ -315,24 +306,21 @@ div#about {
     margin: 1rem 0 0 1rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    height: 36rem;
-
 
 }
 
+
 .project-info {
-    margin: .5rem 1rem;
-    padding: 0 1rem;
-    border-radius: 2rem;
-    /* background-color: #E0F2F1; Teal 50 */
+    padding: 0 1rem 2rem 0;
+    
+
 }
 
 #projects .image-container {
-    width: 70%;
-    overflow: hidden;
+    width: 80%;
     justify-self: center;
-    flex: 1 0 10rem;
-}
+    margin-bottom: 1rem;
+  }
 
 .projectSlides {
     display: none;
@@ -341,7 +329,6 @@ div#about {
 
 .projectSlides img {
     margin-top: 1rem;
-
     width: 100%;
     border: .5rem solid white;
     box-shadow: 0 4px 8px 0 #BDBDBD;
@@ -412,6 +399,7 @@ div#about {
     padding: 2rem;
   }
 
+
  
   @media only screen and (max-width: 768px) {
     
@@ -423,6 +411,7 @@ div#about {
     section#projects,
     section#contact {
         grid-template-columns: 1fr;
+        
     }
     
     div.about-info {
@@ -509,12 +498,25 @@ div#about {
         justify-content: center; 
     }
 
-   
+}
 
     @media only screen and (max-width: 480px) {
     
         .about-info p.fourth {
             display: none;
         }
+
+       ul {
+        font-size: 0.8rem;
+        line-height: 2;
+       }
+    }
+
+@media only screen and (min-width: 1600px) {
+    * {
+        font-size: 24px;
+    }
+
+    h2 {font-size: 5rem;
     }
 }
