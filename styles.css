@@ -39,7 +39,8 @@ h2 {
     font-weight: 900;
     font-size: 3rem;
     padding: .5rem;
-   
+    
+    
 }
 
 
@@ -73,6 +74,7 @@ a:hover {
 
 p {
     padding: .3rem .5rem .5rem 0;
+    max-width: 55ch;
 }
 
 ul {
@@ -123,18 +125,17 @@ ul {
 
 }
 
-section#about {
+/* section#about {
     display: grid;
     grid-template-columns: 35% 35% 30%;
     
 
-}
-
+} */
+section#about,
 section#projects,
 section#contact {
     display: grid;
     grid-template-columns: 35% 65%;
-
 }
 
 
@@ -209,6 +210,14 @@ section {
 
 /* About Section */
 
+.about-info {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background-color: #F5F5F5;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
 
 #about .image-container {
     width: 100%;
@@ -217,25 +226,15 @@ section {
 }
 
 #about img {
-    max-width: 95%;
+    max-width: 70%;
     height: auto;
     display: block; 
-    margin: .5rem 0 0 1rem;
+    margin: 1rem 0;
     box-shadow: 0 4px 8px 0 #BDBDBD;
-    border-top-left-radius: 2rem; 
-    border-bottom-left-radius: 2rem;
+    
 
 }
 
-
-.about-info,
-.contact-info p {
-    margin: .5rem 1rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    background-color:#F5F5F5; /* Teal 50 */
-    min-width: 20ch;
-}
 
 #about span.verb {
     background-color: #E6EE9C; /* lime 200 */
@@ -360,6 +359,18 @@ section {
     
 }
 
+/* Contact Info */
+
+.contact-info p {   
+    margin: .5rem 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    min-width: 20ch;
+    background-color:#F5F5F5; /* Teal 50 */
+    border-top-left-radius: 2rem; 
+    border-bottom-left-radius: 2rem; */
+
+}
 
 
 /* Fading animation */
@@ -386,7 +397,7 @@ section {
 
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding-bottom: 1rem;
     background-color: #00695c;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e6ee9c' fill-opacity='0.41' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -493,10 +504,6 @@ section {
         text-align: center;
     }
 
-    .footer {
-     
-        justify-content: center; 
-    }
 
 }
 
@@ -513,10 +520,17 @@ section {
     }
 
 @media only screen and (min-width: 1600px) {
+ 
     * {
-        font-size: 24px;
+        font-size: 2vw;
     }
 
-    h2 {font-size: 5rem;
+    h2 {
+        letter-spacing: 3vw;
+    }
+
+    .dot {
+        height: 3rem;
+        width: 3rem;
     }
 }
